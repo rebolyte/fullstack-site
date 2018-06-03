@@ -10,11 +10,30 @@ blocks:
     button_text: "Contact Us"
     button_url: "/contact"
     image_position: "right"
-  - template: "media-feature"
+  - template: "card-grid"
+    num_cols: 3
+    cards:
+      - title: "Services"
+        description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et lorem sed quam porta rhoncus.
+        buttonText: "Learn More"
+        buttonUrl: "/services/"
+      - title: "Products"
+        description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et lorem sed quam porta rhoncus.
+        buttonText: "Learn More"
+        buttonUrl: "/products/"
+      - title: "Case Studies"
+        description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et lorem sed quam porta rhoncus.
+        buttonText: "Learn More"
+        buttonUrl: "/case-studies/"
+  - template: "2up"
     heading: "Full-Stack Developers Using Full-Stack Technology"
-    content: "something something something"
-    image: "http://via.placeholder.com/500x280"
-    image_position: "left"
+    left: |-
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et lorem sed quam porta rhoncus. Pellentesque porttitor nisi sit amet tortor tristique, nec euismod odio laoreet. Vivamus non elementum sem, non sodales dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et lorem sed quam porta rhoncus. Pellentesque porttitor nisi sit amet tortor tristique, nec euismod odio laoreet. Vivamus non elementum sem, non sodales dolor.  Pellentesque porttitor nisi sit amet tortor tristique, nec euismod odio laoreet. Vivamus non elementum sem, non sodales dolor.
+    right: |-
+      Lorem ipsum dolor *sit amet*, consectetur adipiscing elit. Donec et lorem sed quam porta rhoncus. Pellentesque porttitor nisi sit amet tortor tristique, nec euismod odio laoreet. Vivamus non elementum sem, non sodales dolor.
+
+
+      Lorem ipsum dolor *sit amet*, consectetur adipiscing elit. Donec et lorem sed quam porta rhoncus. Pellentesque porttitor nisi sit amet tortor tristique, nec euismod odio laoreet. Vivamus non elementum sem, non sodales dolor.
   - template: "action-feature"
     background_style: "dark"
     heading: "We Build the Product, You Supply the Idea."
