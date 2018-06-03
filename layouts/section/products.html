@@ -1,9 +1,37 @@
 {{ define "main" }}
 
 <div>
-        {{ partial "page-title" (dict "title" .Title "subtitle" .Params.subtitle)}}
+    {{ partial "page-title" (dict "title" .Title "subtitle" .Params.subtitle)}}
 
-    {{ .Content }}
+    <div class="container mx-auto mt-12 flex flex-col items-center px-4">
+        {{ range (where .Site.Pages.ByWeight "Section" "products") }}
+            {{ if ne .Permalink $.Permalink }} <!-- don't include self -->
+                <article class="max-w-lg w-full lg:flex mb-8 shadow-lg">
+                    <div class="h-48 lg:h-auto lg:w-64 flex-none bg-cover rounded-t-lg lg:rounded-t-none lg:rounded-l-lg text-center overflow-hidden" style="background-image: url('{{ .Params.thumbnail }}');">
+                    </div>
+                    <div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b-lg lg:rounded-b-none lg:rounded-r-lg px-4 flex flex-col justify-between leading-normal">
+                        <div class="mb-8">
+                            <div class="px-6 py-4">
+                                <div class="mb-2"><a class="font-bold text-grey-darker text-2xl no-underline rl-l-title-underline" href="{{ .RelPermalink | relLangURL }}">{{ .Title }}</a></div>
+                                <p class="text-grey-darker text-base">{{ .Params.description }}</p>
+                            </div>
+                            <div class="px-6 py-4">
+                                <a class="red-btn-outline" href="{{ .RelPermalink | relLangURL }}">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            {{ end }}
+        {{ end }}
+    </div>
+
+    {{ partial "blockloader" . }}
+
+    {{ with .Content }}
+        <section class="container mx-auto mt-12 px-2 md:px-8 pb-8 text-rl-gray">
+            {{ . }}
+        </section>
+    {{ end }}
 
 </div>
 
