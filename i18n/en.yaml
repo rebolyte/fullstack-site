@@ -2,6 +2,12 @@ about:
   other: About Fullstack
 contact_heading:
   other: By Form
+service:
+  other: Service
+product:
+  other: Product
+case_study:
+  other: Case Study
 postedTo:
   other: 'This article has also been posted to:'
 twitterShare:

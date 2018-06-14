@@ -1,9 +1,24 @@
-<div class="min-h-2xs relative bg-theme-gradient flex items-center md:pt-8 pb-12">
+{{- $hasBg := (isset .page "bg_image") -}}
+{{- $hasSplash := (and (isset .page "splash_type") (isset .page "splash_src")) -}}
+{{- $videoSplash := (eq .page.splash_type "video") -}}
+{{- $hasCta := (and (isset .page "cta_text") (isset .page "cta_url")) -}}
+<div class="relative {{ cond (or $hasBg $hasSplash) "h-80" "flex items-center h-32" }} {{ if $hasSplash }}mb-80{{end}} {{ if not $hasBg }}bg-theme-gradient{{ end }} md:pt-8 pb-12 bg-center bg-no-repeat bg-cover"
+{{ if $hasBg }} style="background-image: url('{{ .page.bg_image }}');" {{ end }}>
+    <div class="container mx-auto">
+        <div class="pl-8 md:pl-24 lg:pl-32">
+            <h2 class="mt-2 max-w-sm text-white text-lg leading-normal font-normal">{{ .category }}</h2>
+            <h1 class="text-white text-4xl">{{ .title }}</h1>
+        </div>
+    </div>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" class="absolute pin-b w-full h-12">
         <polygon fill="#eeeeee" points="0,100 100,0 100,100"/>
     </svg>
-    <div class="ml-8 md:ml-24 lg:ml-32">
-        <h1 class="text-white text-4xl">{{ .title }}</h1>
-        <h2 class="mt-2 max-w-sm text-rl-gray text-lg leading-normal font-normal">{{ .subtitle }}</h2>
-    </div>
+    {{ if $hasSplash }}
+        <div class="relative mx-auto mt-16 max-w-lg h-80 shadow-blurred" {{ if not $videoSplash }} style="background-image: url('{{ .page.splash_src }}');" {{ end }}>
+            {{ if $videoSplash }} {{ .page.splash_src | safeHTML }} {{ end }}
+            {{ if $hasCta }}
+            <a href="{{ .page.cta_url }}" class="absolute pin-b pin-r -mb-4 mr-12 btn px-12 py-4 rounded-xl">{{ .page.cta_text }} &rarr;</a>
+            {{ end }}
+        </div>
+    {{ end }}
 </div>
