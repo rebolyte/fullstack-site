@@ -2,12 +2,12 @@
 {{- $hasSplash := (and (isset .page "splash_type") (isset .page "splash_src")) -}}
 {{- $videoSplash := (eq .page.splash_type "video") -}}
 {{- $hasCta := (and (isset .page "cta_text") (isset .page "cta_url")) -}}
-<div class="relative {{ cond (or $hasBg $hasSplash) "h-80" "flex items-center h-32" }} {{ if $hasSplash }}mb-80{{end}} {{ if not $hasBg }}bg-theme-gradient{{ end }} md:pt-8 pb-12 bg-center bg-no-repeat bg-cover"
+<div class="relative {{ cond (or $hasBg $hasSplash) "h-80" "flex items-center h-32" }} {{ if $hasSplash }}mb-80{{end}} {{ if not $hasBg }}bg-theme-gradient{{ end }} -mt-px md:pt-8 pb-12 bg-center bg-no-repeat bg-cover"
 {{ if $hasBg }} style="background-image: url('{{ .page.bg_image }}');" {{ end }}>
     <div class="container mx-auto">
         <div class="pl-8 md:pl-24 lg:pl-32">
             {{ with .category }}
-                <h2 class="mt-2 max-w-sm text-white text-lg leading-normal font-normal">{{ . }}</h2>
+                <h2 class="max-w-sm text-white text-lg leading-normal font-normal">{{ . }}</h2>
             {{ end }}
             <h1 class="text-white text-4xl">{{ .title }}</h1>
         </div>
@@ -16,15 +16,17 @@
         <polygon fill="#eeeeee" points="0,100 100,0 100,100"/>
     </svg>
     {{ if $hasSplash }}
-        <div class="relative mx-auto flex justify-center mt-16 p-4 max-w-lg min-h-xs bg-white rounded-xl shadow-blurred">
-            {{ if $videoSplash }}
-                {{ .page.splash_src | safeHTML }}
-            {{ else }}
-                <div class="flex-grow rounded-xl bg-cover" style="background-image: url('{{ .page.splash_src }}');"></div>
-            {{ end }}
-            {{ if $hasCta }}
-            <a href="{{ .page.cta_url }}" class="absolute pin-b pin-r -mb-4 mr-12 btn px-12 py-4 rounded-xl">{{ .page.cta_text }} &rarr;</a>
-            {{ end }}
+        <div class="mx-4">
+            <div class="relative mx-auto flex justify-center mt-16 p-4 max-w-lg min-h-xs bg-white rounded-xl shadow-blurred">
+                {{ if $videoSplash }}
+                    {{ .page.splash_src | safeHTML }}
+                {{ else }}
+                    <div class="flex-grow rounded-xl bg-cover" style="background-image: url('{{ .page.splash_src }}');"></div>
+                {{ end }}
+                {{ if $hasCta }}
+                <a href="{{ .page.cta_url }}" class="absolute pin-b pin-r -mb-4 mr-12 btn px-12 py-4 rounded-xl">{{ .page.cta_text }} &rarr;</a>
+                {{ end }}
+            </div>
         </div>
     {{ end }}
 </div>
