@@ -16,6 +16,15 @@ blocks:
     content: "Proin at finibus ex. *Duis sed nisi lectus.* Mauris interdum ac nunc quis pharetra. Vivamus rhoncus porttitor ante."
     image: "http://via.placeholder.com/500x280"
     image_position: "left"
+  - template: "action-feature"
+    heading: "Ready to Start Your Next Amazing Project?"
+    content: We’re excited to help you build it! Reach out to us and request a proposal from our team.
+    button_text: "Contact Us"
+    button_url: "/contact/"
+  - template: "narrow-cta"
+    description: "Want to Talk with an Actual Person?"
+    link_url: "/contact/"
+    link_text: "Start a Conversation"
 ---
 
 content here.
