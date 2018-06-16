@@ -16,7 +16,8 @@ permalinks:
   services: /:section/:slug/
 
 taxonomies:
-  tags: tags
+  category: category
+  tag: tags
 
 languages:
   en:

@@ -5,6 +5,12 @@
 {{ define "main" }}
 	{{ partial "page-title" (dict "category" (i18n "case_study") "title" .Title "page" .Params)}}
 
+	{{ with .Content }}
+		<section class="container mx-auto mt-12 px-2 md:px-8 pb-8 max-w-lg text-rl-gray">
+			{{ . }}
+		</section>
+	{{ end }}
+
  	<!-- Use page-specific blockloader, since we need to divide up some sections -->
     {{- range .Params.blocks -}}
         {{- if eq .template "hero" -}}{{ partial "blocks/hero" (dict "Params" .) }}{{- end -}}
@@ -18,13 +24,7 @@
 		{{- if eq .template "accordion" -}}{{ partial "blocks/accordion" (dict "Params" .) }}{{- end -}}
     {{- end -}}
 
-	{{ with .Content }}
-		<section class="container mx-auto mt-12 px-2 md:px-8 pb-8 text-rl-gray">
-			{{ . }}
-		</section>
-	{{ end }}
-
-	<div class="w-full h-4 mt-12 bg-rl-golden-darker"></div>
+	<div class="w-full h-4 mt-12 md:mt-24 bg-rl-golden-darker"></div>
     <div class="bg-theme-gradient curve-top w-full">
         {{- range .Params.blocks -}}
             {{- if eq .template "action-feature" -}}{{ partial "blocks/action-feature" (dict "Params" .) }}{{- end -}}

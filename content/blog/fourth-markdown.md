@@ -2,6 +2,7 @@
 date: 2018-05-28T13:52:27-05:00
 title: Markdown test
 author: Nenad Rakocevic
+category: update
 tags:
   - gui
   - macos

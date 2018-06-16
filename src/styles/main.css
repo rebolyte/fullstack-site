@@ -29,3 +29,11 @@
 /**
  * Other site-specific styles
  */
+
+.bg-green-gradient {
+	background-image: linear-gradient(
+		to left,
+		config('colors.rl-green'),
+		config('colors.rl-green-darker')
+	);
+}

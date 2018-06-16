@@ -2,6 +2,7 @@
 date: 2017-04-11T20:01:17-05:00
 title: This is the second listing
 author: Gregg Irwin
+category: meeting
 tags:
   - blockchain
 hero_type: image

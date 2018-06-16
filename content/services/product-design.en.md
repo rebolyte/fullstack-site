@@ -1,7 +1,7 @@
 ---
-title: Product Consulting
-weight: 1
-description: consulting Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et lorem sed quam porta rhoncus.
+title: Product Design
+weight: 2
+description: design Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 splash_type: "video"
 splash_src: >
   <iframe allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube-nocookie.com/embed/-KqNO_sDqm4?rel=0" width="560"></iframe>
