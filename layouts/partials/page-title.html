@@ -2,7 +2,7 @@
 {{- $hasSplash := (and (isset .page "splash_type") (isset .page "splash_src")) -}}
 {{- $videoSplash := (eq .page.splash_type "video") -}}
 {{- $hasCta := (and (isset .page "cta_text") (isset .page "cta_url")) -}}
-<div class="relative {{ cond (or $hasBg $hasSplash) "h-80" "flex items-center h-32" }} {{ if $hasSplash }}mb-100{{end}} {{ if not $hasBg }}bg-theme-gradient{{ end }} -mt-px md:pt-8 pb-12 bg-center bg-no-repeat bg-cover"
+<div class="relative {{ cond (or $hasBg $hasSplash) "h-80" "flex items-center h-32" }} {{ if $hasSplash }}mb-100{{end}} {{ if not $hasBg }}bg-theme-gradient{{ end }} -mt-px md:pt-16 pb-12 bg-center bg-no-repeat bg-cover"
 {{ if $hasBg }} style="background-image: url('{{ .page.bg_image }}');" {{ end }}>
     <div class="container mx-auto">
         <div class="pl-8 md:pl-24 lg:pl-32">
@@ -17,7 +17,7 @@
     </svg>
     {{ if $hasSplash }}
         <div class="mx-4">
-            <div class="relative mx-auto flex justify-center mt-16 p-4 max-w-lg min-h-sm bg-white rounded-xl shadow-blurred">
+            <div class="relative mx-auto flex justify-center mt-16 p-8 max-w-lg min-h-sm bg-white rounded-xl shadow-blurred">
                 {{ if $videoSplash }}
                     {{ .page.splash_src | safeHTML }}
                 {{ else }}
