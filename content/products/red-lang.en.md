@@ -2,7 +2,7 @@
 title: Red Language
 weight: 1
 description: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et lorem sed quam porta rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et lorem sed quam porta rhoncus.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et lorem sed quam porta rhoncus.
 splash_type: "image"
 splash_src: "https://tailwindcss.com/img/card-top.jpg"
 cta_text: "Launch Product"

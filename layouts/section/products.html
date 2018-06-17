@@ -6,21 +6,7 @@
     <div class="container mx-auto py-12 md:py-24 flex flex-col items-center px-4">
         {{ range (where .Site.Pages.ByWeight "Section" "products") }}
             {{ if ne .Permalink $.Permalink }} <!-- don't include self -->
-                <article class="max-w-lg w-full lg:flex mb-8 rounded-xl shadow-lg">
-                    <div class="h-48 lg:h-auto lg:w-64 flex-none bg-cover rounded-t-xl lg:rounded-t-none lg:rounded-l-xl text-center overflow-hidden" style="background-image: url('{{ .Params.splash_src }}');">
-                    </div>
-                    <div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b-xl lg:rounded-b-none lg:rounded-r-xl px-4 flex flex-col justify-between leading-normal">
-                        <div class="mb-8">
-                            <div class="px-6 py-4">
-                                <div class="mb-2"><a class="font-bold text-grey-darker text-2xl no-underline rl-l-title-underline" href="{{ .RelPermalink | relLangURL }}">{{ .Title }}</a></div>
-                                <p class="text-grey-darker text-base">{{ .Params.description }}</p>
-                            </div>
-                            <div class="px-6 py-4">
-                                <a class="btn-outline btn-outline-red" href="{{ .RelPermalink | relLangURL }}">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                </article>
+                {{ partial "side-card" (dict "thumbnail" .Params.splash_src "title" .Title "description" .Params.description "button_url" .RelPermalink "button_text" "Learn More") }}
             {{ end }}
         {{ end }}
     </div>
