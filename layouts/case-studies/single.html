@@ -24,8 +24,7 @@
 		{{- if eq .template "accordion" -}}{{ partial "blocks/accordion" (dict "Params" .) }}{{- end -}}
     {{- end -}}
 
-	<div class="w-full h-4 mt-12 md:mt-24 bg-rl-golden-darker"></div>
-    <div class="bg-theme-gradient curve-top w-full">
+    <div class="bg-theme-gradient border-top-theme w-full">
         {{- range .Params.blocks -}}
             {{- if eq .template "action-feature" -}}{{ partial "blocks/action-feature" (dict "Params" .) }}{{- end -}}
             {{- if eq .template "narrow-cta" -}}{{ partial "blocks/narrow-cta" (dict "Params" .) }}{{- end -}}

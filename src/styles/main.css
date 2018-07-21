@@ -37,3 +37,7 @@
 		config('colors.rl-green-darker')
 	);
 }
+
+.border-top-theme {
+	border-top: 1rem solid config('colors.rl-golden-darker');
+}
