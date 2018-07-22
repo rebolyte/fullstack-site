@@ -1,5 +1,6 @@
 ---
 baseURL: "https://fullstack.technology/"
+title: Fullstack Technologies
 languageCode: "en-us"
 metaDataFormat: yaml
 theme: "featherweight"
@@ -18,6 +19,18 @@ permalinks:
 taxonomies:
   category: category
   tag: tags
+
+outputs:
+  home:
+    - HTML
+    - JSON
+  section:
+    - HTML
+    - RSS
+    - JSON
+  page:
+    - HTML
+    - JSON
 
 languages:
   en:
