@@ -4,7 +4,7 @@ weight: 3
 description: development Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et lorem sed quam porta rhoncus.
 splash_type: "video"
 splash_src: >
-  <iframe allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0" height="450" src="https://www.youtube-nocookie.com/embed/-KqNO_sDqm4?rel=0" width="750"></iframe>
+  <iframe src="https://www.youtube-nocookie.com/embed/-KqNO_sDqm4?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 blocks:
   - template: "media-feature"
     heading: "Benefit 1"
