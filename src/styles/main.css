@@ -49,3 +49,27 @@
 .border-top-theme {
 	border-top: 1rem solid config('colors.rl-golden-darker');
 }
+
+.ornament {
+	@apply .absolute .w-12 .h-12;
+}
+
+.ornament-l {
+	@apply .absolute .w-24 .h-24;
+}
+
+.ornament-xl {
+	@apply .absolute;
+
+	width: 12rem;
+	height: 12rem;
+}
+
+@screen md {
+	.ornament-xl {
+		@apply .absolute;
+
+		width: 25rem;
+		height: 25rem;
+	}
+}

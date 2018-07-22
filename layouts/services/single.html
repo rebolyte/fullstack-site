@@ -27,11 +27,7 @@
 
     <div class="mt-12 md:mt-24 bg-theme-gradient border-top-theme w-full">
         {{- range .Params.blocks -}}
-            {{- if eq .template "action-feature" -}}
-                <div class="py-12 md:py-24">
-                    {{ partial "blocks/action-feature" (dict "Params" .) }}
-                </div>
-            {{- end -}}
+            {{- if eq .template "action-feature" -}}{{ partial "blocks/action-feature" (dict "Params" .) }}{{- end -}}
             {{- if eq .template "narrow-cta" -}}{{ partial "blocks/narrow-cta" (dict "Params" .) }}{{- end -}}
         {{- end -}}
     </div>
