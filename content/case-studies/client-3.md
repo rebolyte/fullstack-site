@@ -25,13 +25,13 @@ blocks:
     right: |-
       Lorem ipsum dolor *sit amet*, consectetur adipiscing elit. Donec et lorem sed quam porta rhoncus. Pellentesque porttitor nisi sit amet tortor tristique, nec euismod odio laoreet. Vivamus non elementum sem, non sodales dolor.
 
-
       Lorem ipsum dolor *sit amet*, consectetur adipiscing elit. Donec et lorem sed quam porta rhoncus. Pellentesque porttitor nisi sit amet tortor tristique, nec euismod odio laoreet. Vivamus non elementum sem, non sodales dolor.
   - template: "action-feature"
     heading: "Ready to Start Your Next Amazing Project?"
     content: We’re excited to help you build it! Reach out to us and request a proposal from our team.
     button_text: "Contact Us"
     button_url: "/contact/"
+    bg_dark: false
   - template: "narrow-cta"
     description: "Want to Talk with an Actual Person?"
     link_url: "/contact/"

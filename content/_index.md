@@ -42,6 +42,7 @@ blocks:
     image_position: "right"
     button_text: "Contact Us"
     button_url: "/contact/"
+    bg_dark: false
   - template: "narrow-cta"
     description: "Want to Talk with an Actual Person?"
     link_url: "/contact/"
